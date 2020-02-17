@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  PitchPerfectExample
-//
-//  Created by DhakaLive on 2/11/20.
-//  Copyright © 2020 DhakaLive. All rights reserved.
-//
-
 import UIKit
 import AVFoundation
 
@@ -14,8 +6,7 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
     @IBOutlet weak var playBtn: UIButton!
     @IBOutlet weak var txtLabel: UILabel!
     @IBOutlet weak var stopBtn: UIButton!
-    
-    
+
     var avRecorder: AVAudioRecorder!
 
     override func viewDidLoad() {
@@ -41,7 +32,6 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
         avRecorder.isMeteringEnabled = true
         avRecorder.prepareToRecord()
         avRecorder.record()
-        
     }
     
     @IBAction func stopButton(_ sender: Any) {
@@ -67,13 +57,11 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
         }
     }
     
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "playAudio" {
             let playVC = segue.destination as! RecordViewController
             playVC.audioURL = sender as? URL
         }
     }
-
 }
 

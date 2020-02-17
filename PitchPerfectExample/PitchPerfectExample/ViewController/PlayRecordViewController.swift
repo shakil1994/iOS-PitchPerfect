@@ -13,7 +13,6 @@ class RecordViewController: UIViewController {
     @IBOutlet weak var reverbButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
     
-    
     var audioURL: URL!
     var audioFile: AVAudioFile!
     var audioEngine: AVAudioEngine!
@@ -173,5 +172,4 @@ class RecordViewController: UIViewController {
             audioEngine.reset()
         }
     }
-    
 }
